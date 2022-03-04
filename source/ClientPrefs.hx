@@ -30,7 +30,7 @@ class ClientPrefs {
 	public static var controllerMode:Bool = false;
 
 	//Added by vs roboscrew
-	public static var judgCounter:Bool = false;
+	public static var judgCounter:Bool = true;
 	public static var showWatermarks:Bool = true;
 	public static var showSongDisplay:Bool = true;
 

@@ -585,6 +585,7 @@ class TitleState extends MusicBeatState
 					addMoreText('NeonFurious', 15); //lets be honest this guy is stupid
 					addMoreText('CrusherNotDrip', 15); //so is this guy
 					addMoreText('ZachTheKing', 15); //but him idk LMAO
+					addMoreText('GeorgeAPP', 15);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 4:
@@ -620,10 +621,10 @@ class TitleState extends MusicBeatState
 					addMoreText('VS');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Roboscrew');
+					addMoreText('Robo');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText(''); // credTextShit.text += '\nFunkin';
+					addMoreText('screw'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();

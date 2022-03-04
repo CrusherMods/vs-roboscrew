@@ -2242,16 +2242,23 @@ class PlayState extends MusicBeatState
 
 		if (health > 2)
 			health = 2;
-
 		if (healthBar.percent < 20)
 			iconP1.animation.curAnim.curFrame = 1;
-		else
+		else if (healthBar.percent > 20 && healthBar.percent < 80)
 			iconP1.animation.curAnim.curFrame = 0;
+		else if (healthBar.percent > 80)
+			iconP1.animation.curAnim.curFrame = 2;
 
-		if (healthBar.percent > 80)
-			iconP2.animation.curAnim.curFrame = 1;
-		else
-			iconP2.animation.curAnim.curFrame = 0;
+		switch(SONG.player2)
+		{
+			default:
+				if (healthBar.percent < 20)
+					iconP2.animation.curAnim.curFrame = 2;
+				else if (healthBar.percent > 20 && healthBar.percent < 80)
+					iconP2.animation.curAnim.curFrame = 0;
+				else if (healthBar.percent > 80)
+					iconP2.animation.curAnim.curFrame = 1;
+		}
 
 		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene) {
 			persistentUpdate = false;
@@ -4311,6 +4318,7 @@ class PlayState extends MusicBeatState
 		setOnLuas('rating', ratingPercent);
 		setOnLuas('ratingName', ratingName);
 		setOnLuas('ratingFC', ratingFC);
+		judgementCounter.text = 'Sicks: ${sicks}\nGoods: ${goods}\nBads: ${bads}\nShits: ${shits}\nMisses: ${songMisses}';
 	}
 
 	public static var othersCodeName:String = 'otherAchievements';

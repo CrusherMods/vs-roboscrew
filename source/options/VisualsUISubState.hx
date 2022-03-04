@@ -48,14 +48,12 @@ class VisualsUISubState extends BaseOptionsMenu
 			false);
 		addOption(option);
 
-		/*
 		var option:Option = new Option('Judgement Counters', 
 		    "If checked, will show Judgement Counters at the left side of the screen",
 		    'judgCounter', 
 			'bool', 
-		    false);
+		    true);
 	    addOption(option);
-		*/
 
 		var option:Option = new Option('Show Watermarks', 
 		    "If unchecked, hides engine watermarks from the bottom right corner of the screen",
