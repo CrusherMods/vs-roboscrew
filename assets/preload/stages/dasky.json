@@ -1,0 +1,9 @@
+{
+	"directory": "weekroboscrew",
+	"defaultZoom": 0.7,
+	"isPixelStage": false,
+
+	"boyfriend": [1070, 100],
+	"girlfriend": [300, 130],
+	"opponent": [-300, 100]
+}

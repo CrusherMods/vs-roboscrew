@@ -1,0 +1,18 @@
+Discord
+- Discord Server (Done)
+- Custom RPC (Not Done)
+- Custom Icons on RPC (Not Done)
+- Link to Mod on Roboscrew Discord Bot (Not Done)
+
+In-Game
+- Character (Done)
+- Stage (Done but a WIP so may change)
+- Screw Note (Done)
+- Weeks (Not Done)
+
+Other Shit
+- Outdated Warning (Done)
+- Credits (Done)
+
+Minecraft
+- Stop WW5 (Not Done)
