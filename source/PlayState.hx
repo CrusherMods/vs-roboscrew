@@ -4155,17 +4155,17 @@ class PlayState extends MusicBeatState
 		if(curBeat % 1 == 0) {
 			
 			iconP1.angle = 15;
-			FlxTween.angle(iconP1, 15, 0, 0.2, {ease: FlxEase.Out, type: PINGPONG});
+			FlxTween.angle(iconP1, 15, 0, 0.2, {ease: FlxEase.easeOut, type: PINGPONG});
 			iconP2.angle = 15;
-			FlxTween.angle(iconP2, 15, 0, 0.2, {ease: FlxEase.Out, type: PINGPONG});
+			FlxTween.angle(iconP2, 15, 0, 0.2, {ease: FlxEase.easeOut, type: PINGPONG});
 		}
 
 		if(curBeat % 2 == 0) {
 			
 			iconP1.angle = -15;
-			FlxTween.angle(iconP1, -15, 0, 0.2, {ease: FlxEase.Out, type: PINGPONG});
+			FlxTween.angle(iconP1, -15, 0, 0.2, {ease: FlxEase.easeOut, type: PINGPONG});
 			iconP2.angle = -15;
-			FlxTween.angle(iconP2, -15, 0, 0.2, {ease: FlxEase.Out, type: PINGPONG});
+			FlxTween.angle(iconP2, -15, 0, 0.2, {ease: FlxEase.easeOut, type: PINGPONG});
 				
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
 			{
