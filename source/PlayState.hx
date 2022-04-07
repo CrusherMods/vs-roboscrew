@@ -4140,6 +4140,9 @@ class PlayState extends MusicBeatState
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
+		
+                iconP1.scale.set(1.2, 1.2);
+		iconP2.scale.set(1.2, 1.2);
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
@@ -4152,17 +4155,17 @@ class PlayState extends MusicBeatState
 		if(curBeat % 1 == 0) {
 			
 			iconP1.angle = 15;
-			FlxTween.angle(iconP1, 0, 0, 0.2, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
 			iconP2.angle = 15;
-			FlxTween.angle(iconP2, 0, 0, 0.2, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		if(curBeat % 2 == 0) {
 			
 			iconP1.angle = -15;
-			FlxTween.angle(iconP1, 0, 0, 0.2, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP1, -15, 0, 0.5, {ease: FlxEase.quadOut});
 			iconP2.angle = -15;
-			FlxTween.angle(iconP2, 0, 0, 0.2, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP2, -15, 0, 0.5, {ease: FlxEase.quadOut});
 				
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
 			{
