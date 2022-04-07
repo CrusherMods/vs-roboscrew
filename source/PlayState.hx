@@ -2226,10 +2226,14 @@ class PlayState extends MusicBeatState
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
-		
+		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP1.scale.set(mult, mult);
 		iconP1.updateHitbox();
-		iconP2.updateHitbox();
 
+		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP2.scale.set(mult, mult);
+		iconP2.updateHitbox();
+				
 		var iconOffset:Int = 26;
 
                 iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
@@ -4146,18 +4150,15 @@ class PlayState extends MusicBeatState
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
+		
+		iconP1.angle = 15;
+		FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
+		iconP2.angle = 15;
+		FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
 		{
 			gf.dance();
-		}
-		
-		if(curBeat % 1 == 0) {
-			
-			iconP1.angle = 15;
-			FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
-			iconP2.angle = 15;
-			FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		if(curBeat % 2 == 0) {
