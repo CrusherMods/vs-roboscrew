@@ -4106,26 +4106,6 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-		
-		if (bounce)
-		{
-			danceLeft = !danceLeft;
-
-			if (danceLeft)
-				{
-					iconP1.angle = 15;
-					FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
-					iconP2.angle = 15;
-					FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
-				}
-				else
-				{
-					iconP1.angle = -15;
-					FlxTween.angle(iconP1, -15, 0, 0.5, {ease: FlxEase.quadOut});
-					iconP2.angle = -15;
-					FlxTween.angle(iconP2, -15, 0, 0.5, {ease: FlxEase.quadOut});
-				}
-		}
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
@@ -4173,6 +4153,11 @@ class PlayState extends MusicBeatState
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
 		{
+		        iconP1.angle = 15;
+			FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
+			iconP2.angle = 15;
+			FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
+			
 			gf.dance();
 		}
 
