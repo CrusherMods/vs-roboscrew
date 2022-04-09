@@ -4152,21 +4152,23 @@ class PlayState extends MusicBeatState
 		iconP2.updateHitbox();
 
 		if (curBeat % gfSpeed == 0 && !gf.stunned && gf.animation.curAnim.name != null && !gf.animation.curAnim.name.startsWith("sing"))
-		{
-		        iconP1.angle = 15;
-			FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
-			iconP2.angle = 15;
-			FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
-			
+		{	
 			gf.dance();
 		}
 
-		if(curBeat % 2 == 0) {
-			
+		if (curBeat % 2 == 1) {
 			iconP1.angle = -15;
 			FlxTween.angle(iconP1, -15, 0, 0.5, {ease: FlxEase.quadOut});
 			iconP2.angle = -15;
 			FlxTween.angle(iconP2, -15, 0, 0.5, {ease: FlxEase.quadOut});
+		}
+		
+		if (curBeat % 2 == 0) {
+			
+		        iconP1.angle = 15;
+			FlxTween.angle(iconP1, 15, 0, 0.5, {ease: FlxEase.quadOut});
+			iconP2.angle = 15;
+			FlxTween.angle(iconP2, 15, 0, 0.5, {ease: FlxEase.quadOut});
 				
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
 			{
